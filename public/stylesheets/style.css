@@ -1,8 +1,20 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
-a {
-  color: #00B7FF;
+.header {
+  background-color: #3498db;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+}
+
+.header-title {
+  font-size: 60px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.header-title > span {
+  margin-right: 20px;
 }
