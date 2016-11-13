@@ -5,9 +5,9 @@ block content
     .panel.panel-default
       #headingOne.panel-heading(role='tab')
         h4.panel-title
-          a(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseOne', aria-expanded='true', aria-controls='collapseOne', class='glyphicon glyphicon-hand-right', aria-hidden='true')
+          a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseOne', aria-expanded='false', aria-controls='collapseOne', class='glyphicon glyphicon-hand-right', aria-hidden='true')
             |  1A
-      #collapseOne.panel-collapse.collapse.in(role='tabpanel', aria-labelledby='headingOne')
+      #collapseOne.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingOne')
         .panel-body
           .list-group
             a.list-group-item(href='#') lien
