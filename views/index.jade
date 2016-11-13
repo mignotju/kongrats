@@ -1,6 +1,7 @@
 extends layout
 
 block content
+  h1= title
   #accordion.panel-group(role='tablist', aria-multiselectable='true')
   .panel.panel-default
     #headingOne.panel-heading(role='tab')
@@ -9,7 +10,8 @@ block content
           |  1A
     #collapseOne.panel-collapse.collapse.in(role='tabpanel', aria-labelledby='headingOne')
       .panel-body
-        | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        .list-group
+          a.list-group-item(href='#') lien 1
   .panel.panel-default
     #headingTwo.panel-heading(role='tab')
       h4.panel-title
@@ -17,7 +19,12 @@ block content
           |  2A
     #collapseTwo.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingTwo')
       .panel-body
-        | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        .list-group
+          a.list-group-item(href='#') MMIS
+          a.list-group-item(href='#') IF
+          a.list-group-item(href='#') ISSC
+          a.list-group-item(href='#') ISI
+          a.list-group-item(href='#') SLE
   .panel.panel-default
     #headingThree.panel-heading(role='tab')
       h4.panel-title
@@ -25,4 +32,9 @@ block content
           |  3A
     #collapseThree.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingThree')
       .panel-body
-        | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        .list-group
+          a.list-group-item(href='#') MMIS
+          a.list-group-item(href='#') IF
+          a.list-group-item(href='#') ISSC
+          a.list-group-item(href='#') ISI
+          a.list-group-item(href='#') SLE
