@@ -1,7 +1,7 @@
 extends layout
 
 block content
-  h1= title
+  h1.glyphicon.glyphicon-education(aria-hidden='true')=  title
   #accordion.panel-group(role='tablist', aria-multiselectable='true')
   .panel.panel-default
     #headingOne.panel-heading(role='tab')
@@ -11,7 +11,7 @@ block content
     #collapseOne.panel-collapse.collapse.in(role='tabpanel', aria-labelledby='headingOne')
       .panel-body
         .list-group
-          a.list-group-item(href='#') lien 1
+          a.list-group-item(href='#') lien
   .panel.panel-default
     #headingTwo.panel-heading(role='tab')
       h4.panel-title
@@ -19,12 +19,22 @@ block content
           |  2A
     #collapseTwo.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingTwo')
       .panel-body
-        .list-group
-          a.list-group-item(href='#') MMIS
-          a.list-group-item(href='#') IF
-          a.list-group-item(href='#') ISSC
-          a.list-group-item(href='#') ISI
-          a.list-group-item(href='#') SLE
+        ul.list-group
+          li.list-group-item
+            span.glyphicon.glyphicon-stats(aria-hidden='true')
+            span MMIS
+          li.list-group-item
+            span.glyphicon.glyphicon-piggy-bank(aria-hidden='true')
+            span IF
+          li.list-group-item
+            span.glyphicon.glyphicon-globe(aria-hidden='true')
+            span ISSC
+          li.list-group-item
+            span.glyphicon.glyphicon-cloud(aria-hidden='true')
+            span ISI
+          li.list-group-item
+            span.glyphicon.glyphicon-plane(aria-hidden='true')
+            span SLE
   .panel.panel-default
     #headingThree.panel-heading(role='tab')
       h4.panel-title
@@ -32,9 +42,19 @@ block content
           |  3A
     #collapseThree.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingThree')
       .panel-body
-        .list-group
-          a.list-group-item(href='#') MMIS
-          a.list-group-item(href='#') IF
-          a.list-group-item(href='#') ISSC
-          a.list-group-item(href='#') ISI
-          a.list-group-item(href='#') SLE
+        ul.list-group
+          li.list-group-item
+            span.glyphicon.glyphicon-stats(aria-hidden='true')
+            span MMIS
+          li.list-group-item
+            span.glyphicon.glyphicon-piggy-bank(aria-hidden='true')
+            span IF
+          li.list-group-item
+            span.glyphicon.glyphicon-globe(aria-hidden='true')
+            span ISSC
+          li.list-group-item
+            span.glyphicon.glyphicon-cloud(aria-hidden='true')
+            span ISI
+          li.list-group-item
+            span.glyphicon.glyphicon-plane(aria-hidden='true')
+            span SLE
