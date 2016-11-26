@@ -2,13 +2,13 @@ extends layout
 
 block content
   table.table.table-bordered
-    tr
-      th #
-      - for (var i = 1; i < 5; i++)
-        th #{pageData.names[i]}
-    tr
-      td 1
-      td 4
-      td 5
-      td 5
-      td Bon cours
+    each row, k in pageData.values
+      tr
+        if (k == 0)
+          th #
+          - for (var j = 1; j< 5; j++)
+            th #{row[j]}
+        else
+          td #{k}
+          - for (var j = 1; j< 5; j++)
+            td #{row[j]}

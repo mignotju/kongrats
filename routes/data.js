@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
   var server2 = new server();
   server2.readCSV(function(donnees) {
     var donneesJson = {};
-    donneesJson.names = donnees[0];
+    donneesJson.values = donnees;
     res.render('data', { title : 'Retours', pageData: donneesJson });
   });
 });
