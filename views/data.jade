@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  table.table.table-bordered
+    each row, k in pageData
+      tr
+        if (k == 0)
+          th #
+          - for (var j = 1; j< 5; j++)
+            th #{row[j]}
+        else
+          td #{k}
+          - for (var j = 1; j< 5; j++)
+            td #{row[j]}
