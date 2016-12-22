@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var data = require('./routes/data');
+var form = require('./routes/form');
 
 var app = express();
 
@@ -26,6 +27,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/users', users);
 app.use('/data', data);
+app.use('/form', form);
+
+
+app.get('/getJson', function (req, res) {
+    // If it's not showing up, just use req.body to see what is actually being passed.
+    console.log(req.body.selectpicker);
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

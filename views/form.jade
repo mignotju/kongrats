@@ -1,0 +1,29 @@
+extends layout
+
+block menus
+
+  form(method='post', action='/reponse')
+  .form-group
+    label(for='annee') Veuillez sélectionner l'année :
+    select#annee(name='annee').form-control
+      option(value='') --
+      option(value='1A') 1A
+      option(value='2A') 2A
+      option(value='3A') 3A
+  .form-group
+    label(for='filiere') Veuillez sélectionner la filière :
+    select#filiere(name='filiere').form-control
+      option(value='') --
+      option.2A(value='MMIS') MMIS
+      option.2A(value='IF') IF
+      option.2A(value='ISI') ISI
+      option.2A(value='SLE') SLE
+      option.2A(value='ISSC') ISSC
+  .form-group
+    label(for='matiere') Veuillez sélectionner la matière :
+    select#matiere(name='matiere').form-control
+      option(value='') --
+      option.2A(value='Algo') Algo
+      option.2A(value='Sport') Sport
+      option.2A(value='Analyse') Analyse
+  button.btn.btn-primary(type='submit') Submit

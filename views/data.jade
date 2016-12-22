@@ -1,7 +1,36 @@
 extends layout
 
+block menus
+
+  h4 Veuillez sélectionner l'année dont vous souhaitez voir apparaître les retours :
+  .dropdown
+    button.btn.btn-primary.dropdown-toggle(type='button', data-toggle='dropdown')
+      | 1A
+      span.caret
+    ul.dropdown-menu
+      li
+        a(href='/data/1A') 1A
+      li
+        a(href='/data/2A') 2A
+      li
+        a(href='/data/3A') 3A
+
+
+
+
+  h4 Veuillez sélectionner la matière :
+  .dropdown
+    button.btn.btn-primary.dropdown-toggle(type='button', data-toggle='dropdown')
+      | Matière
+      span.caret
+    ul.dropdown-menu
+      each matiere in listeMatiere
+        li
+          a(href='/matiere/#{matiere}') #{matiere}
+
+
 block content
-  table.table.table-bordered
+  table.table.table-bordered.donnees
     each row, k in pageData
       tr
         if (k == 0)
