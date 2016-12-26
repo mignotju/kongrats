@@ -5,7 +5,8 @@ block content
     thead
       tr
         th #
-        - for (var j = 1; j< 5; j++)
+        - var longueur_test_vouee_a_changer = 5
+        - for (var j = 1; j< longueur_test_vouee_a_changer; j++)
           th #{feedbacks[0][j]}
     tbody
         each row, k in feedbacks
@@ -16,7 +17,3 @@ block content
             td #{row[2]}
             td #{row[3]}
             td #{row[4]}
-
-block javascript
-  script(src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.3.0/list.min.js")
-  script(src='/javascripts/filtre.js')

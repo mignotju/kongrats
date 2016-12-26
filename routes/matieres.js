@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
   parser.readCSV(function(liste) {
     var liste_matieres = {};
     liste_matieres = liste;
-    res.render('matieres', { title : 'Retours', liste_matieres: liste_matieres });
+    res.render('matieres', { title : 'Liste des matières', liste_matieres: liste_matieres });
   });
 });
 

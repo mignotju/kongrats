@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
   parser.readCSV(function(feedbacks) {
     var feedbacksJson = {};
     feedbacksJson = feedbacks;
-    res.render('feedbacks', { title : 'Retours', feedbacks: feedbacksJson });
+    res.render('feedbacks', { title : 'Feedbacks', feedbacks: feedbacksJson });
   });
 });
 
