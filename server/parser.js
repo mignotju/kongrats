@@ -1,7 +1,7 @@
 var fs = require('fs')
 var parse = require('csv-parse')
 
-module.exports = function() {
+module.exports = function(file) {
 
   var readCSV = function(callback) {
     var parser = parse({delimiter: ','}, function(err, data){
@@ -10,7 +10,7 @@ module.exports = function() {
       }
     });
 
-    fs.createReadStream(__dirname+'/../enseignements.csv').pipe(parser);
+    fs.createReadStream(__dirname+file).pipe(parser);
   }
 
   return {

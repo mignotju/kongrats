@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  table.table.table-bordered
+    thead
+      tr
+        th #
+        - for (var j = 1; j< 5; j++)
+          th #{feedbacks[0][j]}
+    tbody
+        each row, k in feedbacks
+          tr
+          if (k != 0)
+            td #{k}
+            td #{row[1]}
+            td #{row[2]}
+            td #{row[3]}
+            td #{row[4]}
+
+block javascript
+  script(src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.3.0/list.min.js")
+  script(src='/javascripts/filtre.js')
