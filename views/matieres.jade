@@ -4,25 +4,20 @@ block content
   div#matieres
     div.col-sm-6.col-sm-offset-3
       div.input-group.form-group
-        input.form-control.search(type='text', placeholder='Chercher une matière')
+        input.form-control.search(type='text', placeholder='Recherchez une matière')
         span.input-group-btn
           button.btn
             i.glyphicon.glyphicon-search
     table.table.table-bordered
       thead
         tr
-          th #
-          - for (var j = 1; j< 5; j++)
-            th #{pageData[0][j]}
+          th Année
+          th Matières
       tbody.list
-          each row, k in pageData
-            tr
-            if (k != 0)
-              td #{k}
-              td #{row[1]}
-              td #{row[2]}
-              td.value #{row[3]}
-              td #{row[4]}
+        each row in liste_matieres
+          tr
+            td #{row[1]}
+            td.value #{row[0]}
 
 block javascript
   script(src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.3.0/list.min.js")
