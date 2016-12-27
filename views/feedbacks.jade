@@ -1,6 +1,10 @@
 extends layout
 
+block stylesheets
+  link(rel='stylesheet', href='/stylesheets/style_feedbacks.css')
+
 block content
+  h2 #{matiere} :
   table.table.table-bordered
     thead
       tr
