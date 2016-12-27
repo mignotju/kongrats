@@ -12,12 +12,15 @@ block content
       thead
         tr
           th Année
-          th Matières
+          th Code apogée
+          th Matière
       tbody.list
-        each row in liste_matieres
+        each row in listeMatieres
           tr
+            td #{row[0]}
             td #{row[1]}
-            td.value #{row[0]}
+            td.value
+              a(href='/feedbacks/#{row[0]}/#{row[1]}') #{row[2]}
 
 block javascript
   script(src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.3.0/list.min.js")

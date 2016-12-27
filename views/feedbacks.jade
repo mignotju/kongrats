@@ -4,16 +4,11 @@ block content
   table.table.table-bordered
     thead
       tr
-        th #
-        - var longueur_test_vouee_a_changer = 5
-        - for (var j = 1; j< longueur_test_vouee_a_changer; j++)
-          th #{feedbacks[0][j]}
+        each question in feedbacks[0]
+          th #{question}
     tbody
         each row, k in feedbacks
-          tr
           if (k != 0)
-            td #{k}
-            td #{row[1]}
-            td #{row[2]}
-            td #{row[3]}
-            td #{row[4]}
+            tr
+              - for (var i = 0; i < row.length; i++)
+                td #{row[i]}
