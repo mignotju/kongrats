@@ -59,7 +59,6 @@ module.exports = function(file) {
     codeMat = codeMatiere;
     var parser = parse({delimiter: ','}, function(err, data){
       data.forEach(traitementDonneesRecoltees);
-
       if (typeof callback === "function") {
         callback(donneesDeLaMatiere);
       }

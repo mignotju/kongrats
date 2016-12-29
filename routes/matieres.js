@@ -6,9 +6,7 @@ var Parser = require('../server/parser');
 router.get('/', function(req, res, next) {
   var parser = new Parser('/../Liste_matieres.csv');
   parser.readCSV(function(liste) {
-    var listeMatieres = {};
-    listeMatieres = liste;
-    res.render('matieres', { title : 'Liste des matières', listeMatieres: listeMatieres });
+    res.render('matieres', { title : 'Liste des matières', listeMatieres: liste });
   });
 });
 
