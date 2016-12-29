@@ -4,7 +4,8 @@ block stylesheets
   link(rel='stylesheet', href='/stylesheets/style_feedbacks.css')
 
 block content
-  h2 #{matiere} :
+  button.btn.btn-secondary(type='button', onclick=onclick="javascript:window.location.href  = '/matieres/'") Retour sur la page matières
+  h2 #{annee} - #{matiere} :
   table.table.table-bordered
     thead
       tr

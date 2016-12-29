@@ -24,8 +24,12 @@ module.exports = function(file) {
 
   function selectionDesQuestionsConcernees(elt, index) {
     var arrayOfEltSplitted = elt.split('-');
-    var codeElt = arrayOfEltSplitted[0];
-    var nomQuestion = arrayOfEltSplitted[1];
+    var codeElt = arrayOfEltSplitted[0].split(' ')[0];
+    var arrayQuestion = [];
+    for (var i = 1; i < arrayOfEltSplitted.length; i++) {
+      arrayQuestion[i-1] = arrayOfEltSplitted[i];
+    }
+    var nomQuestion = arrayQuestion.join('-');
     if (codeElt == codeMat) {
       tableauIndex[tableauIndex.length] = index;
       listeQuestions[listeQuestions.length] = nomQuestion;
