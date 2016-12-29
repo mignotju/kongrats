@@ -19,6 +19,7 @@
 1A,3MMEEV,L'éthique et vous
 1A,3MMSAS1,Soutien en anglais
 1A,3MMTANS1,Projet TANDEM
+1A,1A,Revue globale
 2A IF,4MMANGS1,Anglais
 2A IF,4MMAOD6,Algorithmique et optimisation discrète
 2A IF,4MMEPSS1,"Activités physiques, sportives et artistiques"
@@ -39,6 +40,7 @@
 2A IF,4MMSANG,Soutien en anglais
 2A IF,4MMSM,Stratégie - Marketing
 2A IF,4MMTANS1,Projet TANDEM
+2A IF,2AIF,Revue globale
 2A ISI,4MMANGS1,Anglais
 2A ISI,4MMAOD6,Algorithmique et optimisation discrète
 2A ISI,4MMEPSS1,"Activités physiques, sportives et artistiques"
@@ -59,6 +61,7 @@
 2A ISI,4MMSANG,Soutien en anglais
 2A ISI,4MMSM,Stratégie - Marketing
 2A ISI,4MMTANS1,Projet TANDEM
+2A ISI,2AISI,Revue globale
 2A ISSC,4MMANGS1,Anglais
 2A ISSC,4MMCSR6,Codage et sécurité des réseaux
 2A ISSC,4MMEPSS1,"Activités physiques, sportives et artistiques"
@@ -81,6 +84,7 @@
 2A ISSC,4MMTANS1,Projet TANDEM
 2A ISSC,4MMTDI,Traitement de l'information
 2A ISSC,4MMTLCMN,Théorie des langages et compilation - mise à niveau
+2A ISSC,2AISSC,Revue globale
 2A MMIS,4MMANGS1,Anglais
 2A MMIS,4MMEPSS1,"Activités physiques, sportives et artistiques"
 2A MMIS,4MMGDPGL,Gestion de projet de génie logiciel
@@ -102,6 +106,7 @@
 2A MMIS,4MMSD6,Systèmes dynamiques
 2A MMIS,4MMSM,Stratégie - Marketing
 2A MMIS,4MMTANS1,Projet TANDEM
+2A MMIS,2AMMIS,Revue globale
 2A SLE,4MMANGS1,Anglais
 2A SLE,4MMEPSS1,"Activités physiques, sportives et artistiques"
 2A SLE,4MMGDPGL,Gestion de projet de génie logiciel
@@ -124,6 +129,7 @@
 2A SLE,4MMTANS1,Projet TANDEM
 2A SLE,4MMTDI,Traitement de l'information
 2A SLE,4MMTLCMN,Théorie des langages et compilation - mise à niveau
+2A SLE,2ASLE,Revue globale
 3A IF,5MMANGL6,Anglais
 3A IF,5MMCPA,Calcul parallèle avancé
 3A IF,5MMCTIF6,Conférences technologiques
@@ -160,6 +166,7 @@
 3A IF,5MMEPOL6,Économie Politique
 3A IF,5MMSANG,Soutien en anglais
 3A IF,5MMTAND,Projet TANDEM
+3A IF,3AIF,Revue globale
 3A ISI,5MMANGL6,Anglais
 3A ISI,5MMARC5,Algorithmique répartie et Cloud
 3A ISI,5MMCTISI,Conférences technologiques
@@ -188,6 +195,7 @@
 3A ISI,5MMSDCA,Systèmes distribués et Cloud avancé
 3A ISI,5MMSDTD,Systèmes distribués pour le traitement des données
 3A ISI,5MMTAND,Projet TANDEM
+3A ISI,3AISI,Revue globale
 3A ISSC,5MMANGL6,Anglais
 3A ISSC,5MMBDER6,Bases de données en réseau
 3A ISSC,5MMCTISS,Conférences technologiques
@@ -209,6 +217,7 @@
 3A ISSC,5MMSANG,Soutien en anglais
 3A ISSC,5MMTAND,Projet TANDEM
 3A ISSC,5MMTSL6,Test des systèmes logiciels
+3A ISSC,3AISSC,Revue globale
 3A MMIS,5MM2531C,"Level sets, transport optimal : application à l'image (en anglais)"
 3A MMIS,5MM2531G,Ondelettes et applications au traitement d'image (en anglais)
 3A MMIS,5MM25323,Méthodes inverses (en anglais)
@@ -249,6 +258,7 @@
 3A MMIS,5MMSANG,Soutien en anglais
 3A MMIS,5MMSIA1,Synthèse d'image et animation
 3A MMIS,5MMTAND,Projet TANDEM
+3A MMIS,3AMMIS,Revue globale
 3A SLE,5MMANGL6,Anglais
 3A SLE,5MMCEAMC,"Conception et exploration d'architectures, multi-coeurs, réseaux sur puces"
 3A SLE,5MMCTSL0,Conférences technologiques
@@ -268,3 +278,4 @@
 3A SLE,5MMEPOL6,Économie Politique
 3A SLE,5MMSANG,Soutien en anglais
 3A SLE,5MMTAND,Projet TANDEM
+3A SLE,3ASLE,Revue globale
