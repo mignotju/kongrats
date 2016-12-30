@@ -4,9 +4,10 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var authent = require('./authent');
 
 var index = require('./routes/index');
-var users = require('./routes/users');
+var login = require('./routes/login');
 var feedbacks = require('./routes/feedbacks');
 var matieres = require('./routes/matieres');
 
@@ -24,10 +25,17 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(require('express-session')({ secret: 'keyboard cat', resave: false, saveUninitialized: false }));
+
+// Initialize Passport and restore authentication state, if any, from the
+// session.
+app.use(authent.passport.initialize());
+app.use(authent.passport.session());
+
 app.use('/', index);
-app.use('/users', users);
-app.use('/feedbacks', feedbacks);
-app.use('/matieres', matieres);
+app.use('/login', login);
+app.use('/feedbacks', require('connect-ensure-login').ensureLoggedIn(), feedbacks);
+app.use('/matieres', require('connect-ensure-login').ensureLoggedIn(), matieres);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
