@@ -4,11 +4,9 @@ var Parser = require('../server/parser');
 
 /* GET data page. */
 router.get('/', function(req, res, next) {
-  var parser = new Parser();
-  parser.readCSV(function(feedbacks) {
-    var feedbacksJson = {};
-    feedbacksJson = feedbacks;
-    res.render('data', { title : 'Retours', pageData: feedbacksJson });
+  var parser = new Parser('/../Liste_matieres.csv');
+  parser.readCSV(function(liste) {
+    res.render('matieres', { title : 'Liste des matières', listeMatieres: liste });
   });
 });
 

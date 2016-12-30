@@ -1,0 +1,17 @@
+extends layout
+
+block stylesheets
+  link(rel='stylesheet', href='/stylesheets/style_login.css')
+
+block content
+  h3 Veuillez entrer votre username et password :
+  form(action='/login', method='post')
+    div.row
+      div.col-sm-3.form-group
+        label Username :
+        input.form-control(type='text', name='username')
+    div.row
+      div.col-sm-3.form-group
+        label Password :
+        input.form-control(type='password', name='password')
+    button.btn.btn-default(type='submit', value='Submit') Submit
