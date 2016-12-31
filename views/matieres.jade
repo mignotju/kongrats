@@ -11,15 +11,15 @@ block content
     table.table.table-bordered
       thead
         tr
-          th Année
-          th Code apogée
-          th Matière
+          th.sort(data-sort='annee') Année
+          th.sort(data-sort='code') Code apogée
+          th.sort(data-sort='matiere') Matière
       tbody.list
         each row in listeMatieres
           tr
-            td #{row[0]}
-            td #{row[1]}
-            td.value
+            td.annee #{row[0]}
+            td.code #{row[1]}
+            td.matiere
               a(href='/feedbacks/#{row[0]}/#{row[1]}/#{row[2]}') #{row[2]}
 
 block javascript

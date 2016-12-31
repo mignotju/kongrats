@@ -1,6 +1,6 @@
 var options = {
-  valueNames: [ 'value' ]
+  valueNames: [ 'annee','code','matiere' ]
 };
 
 // Init list
-var contactList = new List('matieres', options);
+var matieresList = new List('matieres', options);
