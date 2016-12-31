@@ -3,7 +3,7 @@ var router = express.Router();
 var Parser = require('../server/parser');
 
 router.get('/:annee/:code/:matiere', function(req, res, next) {
-  var parser = new Parser('/../enseignements-'+req.params.annee+' .csv');
+  var parser = new Parser('/../enseignements-'+req.params.annee+'.csv');
   parser.parserFeedbacks(req.params.code, function(feedbacks) {
     var feedbacksJson = {};
     feedbacksJson = feedbacks;
