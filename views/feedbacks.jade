@@ -2,18 +2,24 @@ extends layout
 
 block stylesheets
   link(rel='stylesheet', href='/stylesheets/style_feedbacks.css')
+  link(rel='stylesheet', href='/stylesheets/style_impression.css', media='print')
 
 block content
-  button.btn.btn-secondary(type='button', onclick=onclick="javascript:window.location.href  = '/matieres/'") Retour sur la page matières
+  button.btn.btn-secondary#impression(type='button', onclick="javascript:window.print()") Enregistrer au format pdf
+  button.btn.btn-secondary#impression(type='button', onclick="javascript:window.location.href  = '/matieres/'") Retour sur la page matières
   h2 #{annee} - #{matiere} :
   table.table.table-bordered
     thead
-      tr
         each question in feedbacks[0]
           th #{question}
     tbody
-        each row, k in feedbacks
-          if (k != 0)
-            tr
-              - for (var i = 0; i < row.length; i++)
-                td #{row[i]}
+      tr
+        td.moy #{moyQualiteGlobale}
+        td.moy #{moyQualiteSupports}
+        td.moy #{moyPertinence}
+        td.moy Notes moyennes pour la matière
+      each row, k in feedbacks
+        if (k != 0)
+          tr
+            - for (var i = 0; i < row.length; i++)
+              td #{row[i]}

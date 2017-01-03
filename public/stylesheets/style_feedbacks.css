@@ -4,4 +4,11 @@ table {
 
 button {
   float: right;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.moy {
+  color: #3498db;
+  font-weight: bold;
 }
