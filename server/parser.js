@@ -21,6 +21,7 @@ module.exports = function(file) {
   donneesDeLaMatiere = [];
   listeQuestions = [];
   tableauIndex = [];
+  optionnel_non_suivi = false;
 
   function selectionDesQuestionsConcernees(elt, index) {
     var arrayOfEltSplitted = elt.split('-');
@@ -37,9 +38,14 @@ module.exports = function(file) {
   };
 
   function selectionDesResultatsConcernes(elt, index) {
-    for (var j = 0; j < tableauIndex.length; j++) {
-      if (index == tableauIndex[j]) {
-        rowEltsConcernes[j] = elt;
+    if (index == tableauIndex[0]-1 && elt == "Non") {
+        rowEltsConcernes = [];
+        optionnel_non_suivi = true;
+    } else if (!optionnel_non_suivi) {
+      for (var j = 0; j < tableauIndex.length; j++) {
+        if (index == tableauIndex[j]) {
+          rowEltsConcernes[j] = elt;
+        }
       }
     }
   };
@@ -50,7 +56,9 @@ module.exports = function(file) {
       donneesDeLaMatiere[0] = listeQuestions;
     } else {
       row.forEach(selectionDesResultatsConcernes);
-      donneesDeLaMatiere[i] = rowEltsConcernes.slice();
+      if (rowEltsConcernes.length != 0)
+        donneesDeLaMatiere[donneesDeLaMatiere.length] = rowEltsConcernes.slice();
+      optionnel_non_suivi = false;
     }
   };
 
