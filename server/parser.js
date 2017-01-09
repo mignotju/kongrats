@@ -50,7 +50,7 @@ module.exports = function(file) {
       donneesDeLaMatiere[0] = listeQuestions;
     } else {
       row.forEach(selectionDesResultatsConcernes);
-      donneesDeLaMatiere[i] = rowEltsConcernes;
+      donneesDeLaMatiere[i] = rowEltsConcernes.slice();
     }
   };
 
