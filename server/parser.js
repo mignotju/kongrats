@@ -30,7 +30,7 @@ module.exports = function(file) {
       arrayQuestion[i-1] = arrayOfEltSplitted[i];
     }
     var nomQuestion = arrayQuestion.join('-');
-    if (codeElt == codeMat) {
+    if (codeElt == codeMat && nomQuestion != " Ce cours faisait-il partie de tes options ?") {
       tableauIndex[tableauIndex.length] = index;
       listeQuestions[listeQuestions.length] = nomQuestion;
     }
