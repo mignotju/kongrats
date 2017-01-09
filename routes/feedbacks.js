@@ -24,6 +24,9 @@ router.get('/:annee/:code/:matiere', function(req, res, next) {
     var moyQualiteGlobale = sumQualiteGlobale/(feedbacks.length - 1);
     var moyQualiteSupports = sumQualiteSupports/(feedbacks.length - 1);
     var moyPertinence = sumPertinence/(feedbacks.length - 1);
+    if (req.params.matiere == "Revue globale") {
+      moyPertinence = -1;
+    }
     res.render('feedbacks', { title : 'Feedbacks', feedbacks: feedbacks,
       matiere : req.params.matiere, annee : req.params.annee,
       moyQualiteGlobale: moyQualiteGlobale, moyQualiteSupports: moyQualiteSupports, moyPertinence: moyPertinence});

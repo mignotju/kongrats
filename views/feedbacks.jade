@@ -16,7 +16,8 @@ block content
       tr
         td.moy #{moyQualiteGlobale}
         td.moy #{moyQualiteSupports}
-        td.moy #{moyPertinence}
+        if (#{moyPertinence} != -1)
+          td.moy #{moyPertinence}
         td.moy Notes moyennes pour la matière
       each row, k in feedbacks
         if (k != 0)
