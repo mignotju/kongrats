@@ -8,17 +8,18 @@ block content
   button.btn.btn-secondary#impression(type='button', onclick="javascript:window.print()") Enregistrer au format pdf
   button.btn.btn-secondary#impression(type='button', onclick="javascript:window.location.href  = '/matieres/'") Retour sur la page matières
   h2 #{annee} - #{matiere} :
+  if (moyPertinence != -1)
+    h3 Qualité globale :  #{moyQualiteGlobale}/6
+    h3 Qualité des supports : #{moyQualiteSupports}/6
+    h3 Pertinence dans le cursus : #{moyPertinence}/6
+  else
+    h3 Le semestre a répondu aux attentes :  #{moyQualiteGlobale}/6
+    h3 Les différents modules sont équilibrés : #{moyQualiteSupports}/6
   table.table.table-bordered
     thead
         each question in feedbacks[0]
           th #{question}
     tbody
-      tr
-        td.moy #{moyQualiteGlobale}
-        td.moy #{moyQualiteSupports}
-        if (moyPertinence != -1)
-          td.moy #{moyPertinence}
-        td.moy Notes moyennes pour la matière
       each row, k in feedbacks
         if (k != 0)
           tr
